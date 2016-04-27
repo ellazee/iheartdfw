@@ -1,4 +1,4 @@
-angular.module("IJApp", ["IJCtrls", "ui.router"])
+angular.module("IJApp", ["ui.router"])
 
 .config([
 	'$stateProvider',
@@ -6,30 +6,31 @@ angular.module("IJApp", ["IJCtrls", "ui.router"])
 	function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('/');
 
-		$stateProvider.state('main', {
+		$stateProvider
+		.state(
+			'main', 
+			{
 			url: '/',
-			templateUrl: 'views/main.html',
-			controller: 'mainCtrl'
-		})
-
-//route for show page
+			templateUrl: 'app/views/main.html'
+			
+			})
 		.state(
 			"about",
 			{
 				url: "/about",
-				templateUrl: "views/about.html"
+				templateUrl: "app/views/about.html"
 			})
 		.state(
 			"eschaton",
 			{
 				url: "/eschaton",
-				templateUrl: "views/eschaton.html"
+				templateUrl: "app/views/eschaton.html"
 			})
 		.state(
 			"Hal",
 			{
 				url: "/Hal",
-				templateUrl: "views/hal.html"
+				templateUrl: "app/views/hal.html"
 			})
 	}
 ]);
