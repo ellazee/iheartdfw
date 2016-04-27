@@ -21,7 +21,7 @@ body {
 	animation: fadeInRight 1.5s;
 }
 .animatehome {
-	animation: rotateInDownLeft 1.5s;
+	animation: fadeIn 1.5s;
 }
 .navbar {
 	background-color: transparent;
